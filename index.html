@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="MIND DRILL CLASSES in Gandhinagar, Jammu — education-focused services with a student-first approach." />
+<title>MIND DRILL CLASSES | Gandhinagar, Jammu</title>
+<style>
+:root{
+  --navy:#07142e; --blue:#1769ff; --cyan:#29c6ff; --ink:#12203a; --muted:#64748b;
+  --bg:#f6f9ff; --white:#fff; --line:#e5ecf7; --green:#16a34a;
+  --shadow:0 20px 60px rgba(7,20,46,.12); --radius:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.topbar{background:var(--navy);color:#dbeafe;font-size:13px}
+.topbar .inner{display:flex;justify-content:space-between;gap:16px;padding:9px 0}
+.nav{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(229,236,247,.85)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.2px}
+.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#fff;box-shadow:0 10px 25px rgba(23,105,255,.28)}
+.logo svg{width:24px}
+.nav-links{display:flex;gap:28px;font-size:14px;font-weight:700;color:#42526e}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{padding:10px 17px;border-radius:12px;background:var(--navy);color:#fff;font-weight:800;font-size:14px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#06142f 0%,#0b2a63 54%,#1255ae 100%);color:#fff;padding:78px 0 84px}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(4px);opacity:.32}
+.hero:before{width:420px;height:420px;background:#23c7ff;right:-130px;top:-160px}
+.hero:after{width:360px;height:360px;background:#4f46e5;left:-160px;bottom:-170px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.12fr .88fr;gap:48px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);border-radius:999px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.eyebrow i{width:8px;height:8px;background:#37e2a1;border-radius:50%;box-shadow:0 0 0 5px rgba(55,226,161,.12)}
+h1{font-size:clamp(40px,6vw,72px);line-height:1.02;letter-spacing:-.045em;margin:20px 0 18px}
+.hero-copy{font-size:18px;max-width:650px;color:#d4e4ff}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 19px;border-radius:14px;font-weight:900;font-size:14px}
+.btn-primary{background:#fff;color:var(--navy)}
+.btn-ghost{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);color:#fff}
+.hero-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.15);border-radius:28px;padding:22px;box-shadow:0 25px 80px rgba(0,0,0,.22)}
+.hero-card .card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.status{font-size:12px;font-weight:800;padding:7px 10px;border-radius:999px;background:#dafbe9;color:#11763e}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.info{padding:15px;border-radius:17px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+.info small{display:block;color:#a9c6f3;font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.info strong{display:block;margin-top:5px;font-size:15px}
+section{padding:82px 0}
+.section-head{max-width:720px;margin-bottom:35px}
+.kicker{color:var(--blue);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em}
+h2{font-size:clamp(30px,4vw,48px);line-height:1.08;letter-spacing:-.035em;margin-top:9px}
+.section-head p{color:var(--muted);margin-top:13px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 12px 40px rgba(32,58,105,.06)}
+.icon{width:48px;height:48px;border-radius:15px;background:#eaf2ff;color:var(--blue);display:grid;place-items:center;margin-bottom:18px}
+.icon svg{width:24px}
+.card h3{font-size:19px;margin-bottom:7px}
+.card p{color:var(--muted);font-size:14px}
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:center}
+.about-panel{background:linear-gradient(160deg,#ecf5ff,#fff);border:1px solid var(--line);border-radius:28px;padding:30px;position:relative;overflow:hidden}
+.about-panel:after{content:"";position:absolute;right:-70px;bottom:-80px;width:220px;height:220px;border-radius:50%;background:linear-gradient(135deg,rgba(41,198,255,.28),rgba(23,105,255,.06))}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;position:relative;z-index:1}
+.stat{background:#fff;border:1px solid var(--line);padding:16px;border-radius:17px}
+.stat strong{display:block;font-size:24px}.stat span{font-size:11px;color:var(--muted);font-weight:800;text-transform:uppercase}
+.checks{display:grid;gap:12px;margin-top:22px}
+.check{display:flex;gap:11px;align-items:flex-start;color:#384a68;font-size:14px}
+.check b{display:grid;place-items:center;flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:#ddf9e9;color:#159447;font-size:12px}
+.features{background:var(--bg)}
+.cta{padding-top:20px}
+.cta-box{background:linear-gradient(135deg,#0b1730,#123f82);border-radius:30px;color:#fff;padding:44px;display:flex;align-items:center;justify-content:space-between;gap:30px;box-shadow:var(--shadow)}
+.cta-box p{color:#c9dafa;margin-top:8px;max-width:660px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px}
+.contact-row{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}
+.contact-row:last-child{border-bottom:0}
+.contact-row .mini{width:40px;height:40px;border-radius:12px;background:#eef5ff;color:var(--blue);display:grid;place-items:center}
+.contact-row strong{display:block;font-size:14px}.contact-row span{display:block;color:var(--muted);font-size:13px}
+.map-placeholder{min-height:100%;border-radius:22px;background:linear-gradient(140deg,#dbeafe,#eff6ff);border:1px dashed #a9c3ed;display:grid;place-items:center;text-align:center;padding:25px;color:#4f668b}
+.map-placeholder strong{display:block;color:#1d355d;margin-bottom:5px}
+footer{background:var(--navy);color:#b9c9e4;padding:28px 0;margin-top:20px}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:13px}
+.mobile-menu{display:none}
+@media(max-width:860px){
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding:60px 0 70px}.nav-links{display:none}.mobile-menu{display:block}.grid-3{grid-template-columns:1fr}.cta-box{align-items:flex-start;flex-direction:column}.topbar .inner{justify-content:center;text-align:center}.topbar .inner span:last-child{display:none}
+}
+@media(max-width:560px){h1{font-size:44px}.hero-copy{font-size:16px}.info-grid,.stat-row{grid-template-columns:1fr}section{padding:65px 0}.cta-box{padding:30px}.nav-cta{display:none}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container inner"><span>📍 Gandhinagar, Jammu</span><span>Open daily: 12:30 PM – 7:30 PM</span></div></div>
+<nav class="nav"><div class="container nav-inner">
+  <a class="brand" href="#home"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V7l8-4 8 4v12"/><path d="M8 19v-6h8v6M6 9h12"/></svg></span><span>MIND DRILL CLASSES</span></a>
+  <div class="nav-links"><a href="#about">About</a><a href="#services">Services</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div>
+  <a class="nav-cta" href="#contact">Enquire Now</a><span class="mobile-menu">☰</span>
+</div></nav>
+
+<main id="home">
+<section class="hero"><div class="container hero-grid">
+  <div>
+    <span class="eyebrow"><i></i> Education & Student Services</span>
+    <h1>Sharpen your mind.<br><span style="color:#6fe2ff">Build your future.</span></h1>
+    <p class="hero-copy">MIND DRILL CLASSES is a growing education-focused establishment in Gandhinagar, Jammu, serving local students and learners across the region with a student-first approach.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#contact">Get in Touch →</a><a class="btn btn-ghost" href="#services">Explore Services</a></div>
+  </div>
+  <div class="hero-card">
+    <div class="card-top"><div><div style="font-size:12px;color:#a9c6f3;font-weight:800">MIND DRILL CLASSES</div><div style="font-size:21px;font-weight:900;margin-top:3px">Gandhinagar, Jammu</div></div><span class="status">Open 12:30–7:30</span></div>
+    <div class="info-grid">
+      <div class="info"><small>Established</small><strong>April 2023</strong></div>
+      <div class="info"><small>Category</small><strong>Education Services</strong></div>
+      <div class="info"><small>Area</small><strong>Gandhinagar, Jammu</strong></div>
+      <div class="info"><small>Service Style</small><strong>Student-focused</strong></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="about" class="about"><div class="container about-grid">
+  <div class="about-panel"><div class="kicker">About the institute</div><h2>A local name with a growing vision.</h2><p style="color:var(--muted);margin-top:14px">Since 04-2023, MIND DRILL CLASSES has aimed to make education support more accessible and dependable for learners in Jammu.</p>
+    <div class="stat-row"><div class="stat"><strong>2023</strong><span>Started</span></div><div class="stat"><strong>Jammu</strong><span>Local presence</span></div><div class="stat"><strong>12:30–7:30</strong><span>Working hours</span></div></div>
+  </div>
+  <div><div class="kicker">Our approach</div><h2>Service that puts customer satisfaction first.</h2><p style="color:var(--muted);margin-top:14px">The team is described as courteous, prompt and committed to helping customers with their questions and service needs. The long-term goal is to expand services and serve a larger client base.</p>
+    <div class="checks"><div class="check"><b>✓</b><span>Local establishment with a clear education-service focus.</span></div><div class="check"><b>✓</b><span>Helpful, responsive support for customer queries.</span></div><div class="check"><b>✓</b><span>Convenient location with accessible transport options.</span></div><div class="check"><b>✓</b><span>Multiple payment options for easy transactions.</span></div></div>
+  </div>
+</div></section>
+
+<section id="services" class="features"><div class="container"><div class="section-head"><div class="kicker">Services</div><h2>Designed around education needs.</h2><p>The supplied business listing places MIND DRILL CLASSES in the Education Verification Services category and describes it as a one-stop destination for customers.</p></div>
+<div class="grid-3">
+  <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h6"/></svg></div><h3>Education Verification</h3><p>Support centered around education-related verification needs, matching the listed business category.</p></div>
+  <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="8"/></svg></div><h3>Student Assistance</h3><p>A convenient point of contact for questions and guidance, with staff described as courteous and prompt.</p></div>
+  <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7h14v10H5z"/><path d="M8 4v3M16 4v3M8 12h8"/></svg></div><h3>Easy Payments</h3><p>Listed payment options include UPI, cash, Visa, MasterCard, RuPay and net banking.</p></div>
+</div></div></section>
+
+<section id="why"><div class="container"><div class="section-head"><div class="kicker">Why choose us</div><h2>A simple, professional experience.</h2><p>The website highlights the strengths presented in the supplied listing, without inventing unsupported credentials or claims.</p></div>
+<div class="grid-3"><div class="card"><h3>Convenient Location</h3><p>Located in Gandhinagar, Jammu, with multiple modes of transport available for visitors.</p></div><div class="card"><h3>Helpful Team</h3><p>Staff are described as courteous, prompt and willing to answer customer questions.</p></div><div class="card"><h3>Growing Vision</h3><p>The establishment intends to expand its range of products and services and reach more clients.</p></div></div>
+</div></section>
+
+<section class="cta"><div class="container"><div class="cta-box"><div><div class="kicker" style="color:#76d9ff">Ready to connect?</div><h2 style="color:#fff">Talk to MIND DRILL CLASSES</h2><p>Use this website as the client-facing front page. Add the verified phone number, WhatsApp number, exact address and social links before publishing.</p></div><a class="btn btn-primary" href="#contact">Contact Details →</a></div></div></section>
+
+<section id="contact"><div class="container"><div class="section-head"><div class="kicker">Contact</div><h2>Visit or get in touch.</h2><p>Contact details below are intentionally kept editable because they were not included in the supplied business data.</p></div>
+<div class="contact-grid">
+  <div class="contact-card">
+    <div class="contact-row"><div class="mini">📍</div><div><strong>Location</strong><span>Gandhinagar, Jammu, Jammu</span></div></div>
+    <div class="contact-row"><div class="mini">🕒</div><div><strong>Business Hours</strong><span>12:30 PM – 7:30 PM</span></div></div>
+    <div class="contact-row"><div class="mini">📞</div><div><strong>Phone</strong><span>[Add verified phone number]</span></div></div>
+    <div class="contact-row"><div class="mini">💬</div><div><strong>WhatsApp</strong><span>[Add verified WhatsApp number]</span></div></div>
+  </div>
+  <div class="map-placeholder"><div><div style="font-size:42px">📍</div><strong>Gandhinagar, Jammu</strong><span>Add the exact street address here to activate a live map embed when the client provides it.</span></div></div>
+</div></div></section>
+</main>
+<footer><div class="container footer-inner"><span>© 2026 MIND DRILL CLASSES. All rights reserved.</span><span>Website demo prepared for client presentation.</span></div></footer>
+</body>
+</html>
