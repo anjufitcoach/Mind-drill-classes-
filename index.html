@@ -1,2843 +1,3337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Mind Drill Classes | Jammu</title>
-
-  <meta
-    name="description"
-    content="Mind Drill Classes - Education and student services in Guru Nanak Nagar, Jammu."
-  />
-
-  <meta
-    name="keywords"
-    content="Mind Drill Classes, coaching classes Jammu, education Jammu, Guru Nanak Nagar coaching"
-  />
-
-  <meta name="theme-color" content="#645cff" />
-
-  <style>
-    /* =====================================================
-       RESET
-    ===================================================== */
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family:
-        Inter,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-
-      color: #172033;
-      background: #f7f9ff;
-      overflow-x: hidden;
-      line-height: 1.5;
-    }
-
-    body::before,
-    body::after {
-      content: "";
-      position: fixed;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: -10;
-      filter: blur(100px);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MIND DRILL CLASSES | Jammu</title>
+
+<meta name="description"
+content="Mind Drill Classes - Learn, Practise and Master. Student-focused academic learning in Jammu.">
+
+<style>
+
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root{
+    --bg:#050816;
+    --bg2:#0a1022;
+    --card:rgba(16,24,48,.72);
+    --card2:rgba(255,255,255,.045);
+
+    --white:#ffffff;
+    --text:#edf2ff;
+    --muted:#a8b2ca;
+
+    --purple:#7c5cff;
+    --purple2:#a98cff;
+    --blue:#22d3ee;
+    --green:#8bffca;
+    --pink:#ff6bd6;
+
+    --border:rgba(255,255,255,.11);
+
+    --radius:25px;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+    color:var(--text);
+
+    background:
+    radial-gradient(
+        circle at 10% 5%,
+        rgba(124,92,255,.20),
+        transparent 28%
+    ),
+    radial-gradient(
+        circle at 90% 12%,
+        rgba(34,211,238,.13),
+        transparent 25%
+    ),
+    linear-gradient(
+        180deg,
+        var(--bg),
+        var(--bg2)
+    );
 
-    body::before {
-      width: 450px;
-      height: 450px;
-      top: -180px;
-      left: -160px;
-      background: #645cff;
-      opacity: 0.08;
-    }
+    line-height:1.6;
+    overflow-x:hidden;
+}
 
-    body::after {
-      width: 500px;
-      height: 500px;
-      right: -220px;
-      bottom: -200px;
-      background: #00b8ff;
-      opacity: 0.08;
-    }
+a{
+    color:inherit;
+    text-decoration:none;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+button{
+    font-family:inherit;
+}
 
-    button {
-      font-family: inherit;
-    }
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+section{
+    padding:100px 0;
+}
 
-    /* =====================================================
-       NAVBAR
-    ===================================================== */
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
+/* =====================================================
+   HEADER
+===================================================== */
 
-      height: 76px;
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    z-index:1000;
 
-      padding: 0 7%;
+    padding:15px 0;
 
-      background: rgba(255, 255, 255, 0.76);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+    transition:.3s;
+}
 
-      border-bottom: 1px solid rgba(20, 25, 50, 0.06);
+header.scrolled{
+    background:
+    rgba(5,8,22,.84);
 
-      z-index: 1000;
-    }
+    backdrop-filter:blur(20px);
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-
-      font-size: 21px;
-      font-weight: 900;
-      letter-spacing: -0.8px;
-    }
+    border-bottom:
+    1px solid var(--border);
+}
 
-    .logo .logo-highlight {
-      color: #645cff;
-    }
+.nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
+    gap:20px;
+}
 
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 650;
-      color: #40495c;
-      transition: 0.25s ease;
-    }
+.logo{
+    display:flex;
+    align-items:center;
 
-    .nav-links a:hover {
-      color: #645cff;
-    }
+    gap:11px;
 
-    .nav-cta {
-      padding: 11px 18px;
-      border-radius: 999px;
+    font-weight:900;
+}
 
-      background: #645cff;
-      color: white !important;
+.logo-mark{
+    width:45px;
+    height:45px;
 
-      box-shadow: 0 10px 25px rgba(100, 92, 255, 0.22);
-    }
+    display:grid;
+    place-items:center;
 
-    .nav-cta:hover {
-      transform: translateY(-2px);
-    }
+    border-radius:14px;
 
-    .menu-button {
-      display: none;
+    background:
+    linear-gradient(
+        135deg,
+        var(--purple),
+        var(--blue)
+    );
 
-      width: 42px;
-      height: 42px;
+    box-shadow:
+    0 0 35px rgba(124,92,255,.35);
 
-      border: 0;
-      border-radius: 12px;
+    font-size:14px;
+}
 
-      background: #f1f0ff;
+.logo small{
+    display:block;
 
-      font-size: 22px;
-      cursor: pointer;
-    }
+    margin-top:1px;
 
-    /* =====================================================
-       HERO
-    ===================================================== */
+    color:var(--muted);
 
-    .hero {
-      min-height: 100vh;
+    font-size:8px;
 
-      padding: 150px 7% 90px;
+    letter-spacing:1.5px;
+}
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+.nav-links{
+    display:flex;
+    align-items:center;
 
-      gap: 70px;
+    gap:21px;
 
-      position: relative;
-    }
+    color:#d8e0f4;
 
-    .hero-content {
-      max-width: 700px;
+    font-size:13px;
+}
 
-      animation: heroAppear 0.9s ease both;
-    }
+.nav-links a{
+    opacity:.75;
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+    transition:.25s;
+}
 
-      padding: 8px 14px;
+.nav-links a:hover,
+.nav-links a.active{
+    opacity:1;
 
-      margin-bottom: 22px;
+    color:var(--blue);
+}
 
-      border-radius: 999px;
+.menu{
+    display:none;
 
-      background: rgba(100, 92, 255, 0.1);
-      color: #554ddd;
+    border:0;
+    background:none;
 
-      font-size: 13px;
-      font-weight: 800;
-    }
+    color:white;
 
-    .hero h1 {
-      font-size: clamp(46px, 7vw, 82px);
+    font-size:28px;
 
-      line-height: 0.98;
+    cursor:pointer;
+}
 
-      letter-spacing: -4px;
 
-      margin-bottom: 25px;
-    }
+/* =====================================================
+   BUTTONS
+===================================================== */
 
-    .hero h1 .gradient-text {
-      background: linear-gradient(90deg, #645cff, #00a9ff);
+.btn{
+    display:inline-flex;
 
-      -webkit-background-clip: text;
-      background-clip: text;
+    align-items:center;
+    justify-content:center;
 
-      color: transparent;
-    }
+    gap:8px;
 
-    .hero-description {
-      max-width: 650px;
+    padding:13px 19px;
 
-      font-size: 18px;
-      color: #687287;
+    border-radius:14px;
 
-      line-height: 1.8;
+    border:1px solid var(--border);
 
-      margin-bottom: 32px;
-    }
+    font-size:14px;
 
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
+    font-weight:800;
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
+    cursor:pointer;
 
-      min-height: 50px;
+    transition:.25s;
+}
 
-      padding: 14px 22px;
+.btn:hover{
+    transform:translateY(-3px);
+}
 
-      border-radius: 14px;
+.primary{
+    background:
+    linear-gradient(
+        135deg,
+        var(--purple),
+        #5c88ff
+    );
 
-      font-size: 14px;
-      font-weight: 800;
+    box-shadow:
+    0 15px 35px rgba(124,92,255,.25);
+}
 
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
-    }
+.ghost{
+    background:
+    rgba(255,255,255,.04);
+}
 
-    .btn-primary {
-      color: white;
-      background: #645cff;
 
-      box-shadow: 0 15px 35px rgba(100, 92, 255, 0.25);
-    }
+/* =====================================================
+   HERO
+===================================================== */
 
-    .btn-primary:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 42px rgba(100, 92, 255, 0.32);
-    }
+.hero{
+    min-height:100vh;
 
-    .btn-secondary {
-      background: white;
+    display:grid;
+    place-items:center;
 
-      border: 1px solid #e4e7ef;
+    padding:
+    150px 0 80px;
+}
 
-      color: #333b4d;
-    }
+.hero-grid{
+    display:grid;
 
-    .btn-secondary:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 30px rgba(20, 30, 60, 0.07);
-    }
+    grid-template-columns:
+    1.08fr .92fr;
 
-    /* =====================================================
-       HERO GRAPHIC
-    ===================================================== */
+    gap:55px;
 
-    .hero-graphic {
-      width: 440px;
-      height: 440px;
+    align-items:center;
+}
 
-      position: relative;
+.badge{
+    display:inline-flex;
 
-      flex: 0 0 auto;
+    align-items:center;
 
-      animation: floating 5s ease-in-out infinite;
-    }
+    gap:8px;
 
-    .hero-orb {
-      position: absolute;
+    padding:
+    8px 13px;
 
-      width: 320px;
-      height: 320px;
+    border-radius:999px;
 
-      top: 60px;
-      left: 60px;
+    border:1px solid var(--border);
 
-      border-radius: 50%;
+    background:
+    rgba(255,255,255,.04);
 
-      background:
-        radial-gradient(
-          circle at 28% 22%,
-          #ffffff 0%,
-          #ddd9ff 17%,
-          #7770ff 42%,
-          #433bd4 72%,
-          #252071 100%
-        );
+    font-size:12px;
 
-      box-shadow:
-        0 40px 90px rgba(100, 92, 255, 0.25),
-        inset -25px -25px 50px rgba(0, 0, 0, 0.11);
+    font-weight:800;
+}
 
-      overflow: hidden;
-    }
+.dot{
+    width:7px;
+    height:7px;
 
-    .hero-orb::before {
-      content: "";
+    border-radius:50%;
 
-      position: absolute;
+    background:var(--green);
 
-      width: 100%;
-      height: 100%;
+    box-shadow:
+    0 0 13px var(--green);
+}
 
-      background:
-        radial-gradient(
-          circle at 20% 20%,
-          rgba(255,255,255,0.5),
-          transparent 20%
-        );
+.hero h1{
+    margin:20px 0;
 
-      animation: orbGlow 5s ease-in-out infinite;
-    }
+    font-size:
+    clamp(46px,7vw,82px);
 
-    .orb-text {
-      position: absolute;
+    line-height:.98;
 
-      inset: 0;
+    letter-spacing:-3px;
+}
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+.grad{
+    background:
+    linear-gradient(
+        90deg,
+        #fff,
+        var(--blue),
+        var(--purple2)
+    );
 
-      color: white;
+    -webkit-background-clip:text;
+    background-clip:text;
 
-      font-size: 43px;
-      font-weight: 950;
+    color:transparent;
+}
 
-      letter-spacing: 4px;
-    }
+.hero p{
+    max-width:650px;
 
-    .floating-card {
-      position: absolute;
+    color:var(--muted);
 
-      padding: 14px 18px;
+    font-size:18px;
+}
 
-      border-radius: 17px;
+.actions{
+    display:flex;
 
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(14px);
+    flex-wrap:wrap;
 
-      border: 1px solid rgba(255, 255, 255, 0.8);
+    gap:12px;
 
-      box-shadow: 0 20px 45px rgba(25, 30, 65, 0.12);
+    margin:28px 0;
+}
 
-      font-size: 14px;
-      font-weight: 800;
+.trust{
+    display:flex;
 
-      white-space: nowrap;
-    }
+    flex-wrap:wrap;
 
-    .card-a {
-      right: 0;
-      top: 25px;
+    gap:17px;
 
-      animation: cardFloat 4s ease-in-out infinite;
-    }
+    color:#bec7dd;
 
-    .card-b {
-      left: 0;
-      bottom: 70px;
+    font-size:13px;
+}
 
-      animation: cardFloat 4.5s ease-in-out infinite reverse;
-    }
 
-    .card-c {
-      right: 25px;
-      bottom: 15px;
+/* =====================================================
+   HERO VISUAL
+===================================================== */
 
-      animation: cardFloat 3.8s ease-in-out infinite;
-    }
+.visual{
+    position:relative;
 
-    .orbit {
-      position: absolute;
+    min-height:500px;
 
-      width: 390px;
-      height: 390px;
+    display:grid;
+    place-items:center;
+}
 
-      top: 25px;
-      left: 25px;
+.glow{
+    position:absolute;
 
-      border: 1px dashed rgba(100, 92, 255, 0.23);
+    width:300px;
+    height:300px;
 
-      border-radius: 50%;
+    border-radius:50%;
 
-      animation: orbitSpin 18s linear infinite;
-    }
+    background:
+    linear-gradient(
+        135deg,
+        var(--purple),
+        var(--blue)
+    );
 
-    .orbit-dot {
-      position: absolute;
+    filter:blur(55px);
 
-      width: 13px;
-      height: 13px;
+    opacity:.23;
 
-      border-radius: 50%;
+    animation:
+    pulse 5s ease-in-out infinite;
+}
 
-      background: #645cff;
+.ring{
+    position:absolute;
 
-      box-shadow: 0 0 20px rgba(100, 92, 255, 0.4);
+    width:425px;
+    height:425px;
 
-      top: 20px;
-      left: 50%;
+    border:
+    1px solid rgba(255,255,255,.12);
 
-      transform: translateX(-50%);
-    }
+    border-radius:50%;
 
-    /* =====================================================
-       SECTIONS
-    ===================================================== */
+    animation:
+    spin 18s linear infinite;
+}
 
-    section {
-      padding: 100px 7%;
-    }
+.ring:before,
+.ring:after{
+    content:"";
 
-    .section-header {
-      max-width: 740px;
+    position:absolute;
 
-      margin-bottom: 50px;
-    }
+    width:13px;
+    height:13px;
 
-    .section-kicker {
-      color: #645cff;
+    border-radius:50%;
 
-      text-transform: uppercase;
+    background:var(--blue);
 
-      letter-spacing: 2px;
+    box-shadow:
+    0 0 20px var(--blue);
+}
 
-      font-size: 12px;
-      font-weight: 900;
-    }
+.ring:before{
+    top:-6px;
+    left:50%;
+}
 
-    .section-header h2 {
-      margin-top: 10px;
+.ring:after{
+    right:2%;
+    bottom:13%;
 
-      font-size: clamp(34px, 5vw, 54px);
+    background:var(--purple);
 
-      line-height: 1.05;
+    box-shadow:
+    0 0 20px var(--purple);
+}
 
-      letter-spacing: -2.5px;
-    }
 
-    .section-header p {
-      margin-top: 15px;
+/* =====================================================
+   METHOD CARD
+===================================================== */
 
-      color: #697387;
+.method{
+    position:relative;
 
-      line-height: 1.8;
-    }
+    z-index:3;
 
-    /* =====================================================
-       STATS
-    ===================================================== */
+    width:320px;
 
-    .stats-section {
-      padding-top: 25px;
-      padding-bottom: 75px;
-    }
+    padding:28px;
 
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    border:
+    1px solid rgba(255,255,255,.16);
 
-      gap: 18px;
-    }
+    border-radius:32px;
 
-    .stat-card {
-      padding: 30px 20px;
+    background:
+    linear-gradient(
+        145deg,
+        rgba(22,31,62,.96),
+        rgba(9,14,31,.85)
+    );
 
-      text-align: center;
+    backdrop-filter:blur(18px);
 
-      background: white;
+    box-shadow:
+    0 30px 90px rgba(0,0,0,.35);
+}
 
-      border: 1px solid #ebedf4;
+.eyebrow{
+    color:var(--blue);
 
-      border-radius: 24px;
+    text-transform:uppercase;
 
-      box-shadow: 0 15px 45px rgba(25, 30, 60, 0.045);
+    letter-spacing:2px;
 
-      transition: 0.3s ease;
-    }
+    font-size:11px;
 
-    .stat-card:hover {
-      transform: translateY(-7px);
-    }
+    font-weight:900;
+}
 
-    .stat-card h3 {
-      color: #645cff;
+.method h3{
+    margin:12px 0 4px;
 
-      font-size: 34px;
+    font-size:26px;
+}
 
-      margin-bottom: 5px;
-    }
+.method > p{
+    color:var(--muted);
 
-    .stat-card p {
-      color: #727b8e;
+    font-size:13px;
+}
 
-      font-size: 13px;
-    }
+.step{
+    display:flex;
 
-    /* =====================================================
-       ABOUT
-    ===================================================== */
+    align-items:center;
 
-    .about-grid {
-      display: grid;
+    gap:12px;
 
-      grid-template-columns: 0.95fr 1.05fr;
+    margin-top:18px;
+}
 
-      gap: 65px;
+.num{
+    width:37px;
+    height:37px;
 
-      align-items: center;
-    }
+    flex:none;
 
-    .about-visual {
-      min-height: 440px;
+    display:grid;
+    place-items:center;
 
-      position: relative;
+    border-radius:12px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    background:
+    rgba(124,92,255,.15);
 
-      border-radius: 32px;
+    border:
+    1px solid rgba(124,92,255,.25);
 
-      background:
-        linear-gradient(135deg, #645cff 0%, #4462e6 55%, #00a9ff 100%);
+    font-weight:900;
 
-      overflow: hidden;
+    font-size:12px;
+}
 
-      box-shadow: 0 35px 80px rgba(74, 77, 220, 0.2);
-    }
+.step b{
+    display:block;
 
-    .about-visual::before,
-    .about-visual::after {
-      content: "";
+    font-size:13px;
+}
 
-      position: absolute;
+.step span{
+    display:block;
 
-      border-radius: 50%;
+    color:var(--muted);
 
-      background: rgba(255,255,255,0.11);
-    }
+    font-size:11px;
+}
 
-    .about-visual::before {
-      width: 300px;
-      height: 300px;
 
-      top: -150px;
-      left: -100px;
-    }
+/* FLOATING CARDS */
 
-    .about-visual::after {
-      width: 260px;
-      height: 260px;
+.float{
+    position:absolute;
 
-      bottom: -140px;
-      right: -80px;
-    }
+    z-index:4;
 
-    .about-word {
-      position: relative;
-      z-index: 2;
+    padding:13px 15px;
 
-      color: white;
+    border:
+    1px solid var(--border);
 
-      font-size: clamp(48px, 7vw, 74px);
+    border-radius:17px;
 
-      font-weight: 950;
+    background:
+    rgba(15,21,42,.82);
 
-      letter-spacing: 3px;
-    }
+    backdrop-filter:blur(14px);
 
-    .about-content h3 {
-      font-size: 32px;
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.3);
 
-      line-height: 1.1;
+    font-size:12px;
 
-      margin-bottom: 18px;
-    }
+    font-weight:800;
 
-    .about-content p {
-      color: #697386;
+    animation:
+    floating 4.5s ease-in-out infinite;
+}
 
-      line-height: 1.85;
+.f1{
+    left:0;
+    top:15%;
+}
 
-      margin-bottom: 18px;
-    }
+.f2{
+    right:0;
+    top:30%;
 
-    .check-list {
-      display: grid;
+    animation-delay:1s;
+}
 
-      gap: 12px;
+.f3{
+    left:8%;
+    bottom:10%;
 
-      margin-top: 24px;
-    }
+    animation-delay:2s;
+}
 
-    .check-item {
-      display: flex;
-      align-items: center;
 
-      gap: 11px;
+/* =====================================================
+   SECTION HEAD
+===================================================== */
 
-      color: #384153;
+.section-head{
+    max-width:750px;
 
-      font-weight: 700;
-    }
+    margin-bottom:42px;
+}
 
-    .check-icon {
-      width: 27px;
-      height: 27px;
+.section-head h2{
+    margin:
+    10px 0 14px;
 
-      display: grid;
-      place-items: center;
+    font-size:
+    clamp(35px,5vw,58px);
 
-      flex: 0 0 auto;
+    line-height:1.04;
 
-      border-radius: 50%;
+    letter-spacing:-2px;
+}
 
-      background: #e9e7ff;
+.section-head p{
+    color:var(--muted);
+}
 
-      color: #645cff;
 
-      font-size: 13px;
-      font-weight: 900;
-    }
+/* =====================================================
+   CARDS
+===================================================== */
 
-    /* =====================================================
-       SERVICES
-    ===================================================== */
+.grid3{
+    display:grid;
 
-    .services-grid {
-      display: grid;
+    grid-template-columns:
+    repeat(3,1fr);
 
-      grid-template-columns: repeat(3, 1fr);
+    gap:18px;
+}
 
-      gap: 20px;
-    }
+.grid2{
+    display:grid;
 
-    .service-card {
-      padding: 32px;
+    grid-template-columns:
+    repeat(2,1fr);
 
-      background: white;
+    gap:18px;
+}
 
-      border: 1px solid #e9ecf3;
+.card{
+    padding:27px;
 
-      border-radius: 25px;
+    border:
+    1px solid var(--border);
 
-      transition: 0.35s ease;
+    border-radius:var(--radius);
 
-      position: relative;
+    background:
+    var(--card);
 
-      overflow: hidden;
-    }
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.23);
 
-    .service-card::after {
-      content: "";
+    transition:.3s;
+}
 
-      position: absolute;
+.card:hover{
+    transform:translateY(-7px);
 
-      width: 100px;
-      height: 100px;
+    border-color:
+    rgba(124,92,255,.4);
+}
 
-      right: -45px;
-      bottom: -45px;
+.icon{
+    width:50px;
+    height:50px;
 
-      border-radius: 50%;
+    display:grid;
+    place-items:center;
 
-      background: rgba(100,92,255,0.06);
-    }
+    border-radius:15px;
 
-    .service-card:hover {
-      transform: translateY(-9px);
+    background:
+    rgba(124,92,255,.14);
 
-      box-shadow: 0 25px 55px rgba(30, 35, 75, 0.09);
-    }
+    border:
+    1px solid rgba(124,92,255,.2);
 
-    .service-icon {
-      width: 58px;
-      height: 58px;
+    font-size:22px;
+}
 
-      display: grid;
-      place-items: center;
+.card h3{
+    margin:
+    13px 0 8px;
 
-      border-radius: 18px;
+    font-size:20px;
+}
 
-      background: #efeeff;
+.card p{
+    color:var(--muted);
 
-      font-size: 27px;
+    font-size:14px;
+}
 
-      margin-bottom: 22px;
-    }
+.pill{
+    display:inline-block;
 
-    .service-card h3 {
-      font-size: 20px;
+    margin-top:15px;
 
-      margin-bottom: 10px;
-    }
+    padding:
+    7px 11px;
 
-    .service-card p {
-      color: #737c8f;
+    border-radius:999px;
 
-      font-size: 14px;
+    background:
+    rgba(34,211,238,.08);
 
-      line-height: 1.75;
-    }
+    border:
+    1px solid rgba(34,211,238,.18);
 
-    /* =====================================================
-       WHY US
-    ===================================================== */
+    color:#c8f8ff;
 
-    .why-wrapper {
-      margin: 30px 5%;
+    font-size:11px;
 
-      padding: 85px 7%;
+    font-weight:800;
+}
 
-      border-radius: 40px;
 
-      color: white;
+/* =====================================================
+   ABOUT
+===================================================== */
 
-      background:
-        radial-gradient(
-          circle at 15% 20%,
-          rgba(100,92,255,0.42),
-          transparent 30%
-        ),
-        #10142b;
-    }
+.about{
+    display:grid;
 
-    .why-wrapper .section-header p {
-      color: #adb4c7;
-    }
+    grid-template-columns:
+    .9fr 1.1fr;
 
-    .why-grid {
-      display: grid;
+    gap:25px;
+}
 
-      grid-template-columns: repeat(3, 1fr);
+.panel{
+    padding:34px;
 
-      gap: 18px;
-    }
+    border:
+    1px solid var(--border);
 
-    .why-card {
-      padding: 30px;
+    border-radius:30px;
 
-      background: rgba(255,255,255,0.045);
+    background:
+    linear-gradient(
+        145deg,
+        rgba(124,92,255,.12),
+        rgba(255,255,255,.03)
+    );
+}
 
-      border: 1px solid rgba(255,255,255,0.09);
+.panel h2{
+    margin:
+    10px 0;
 
-      border-radius: 22px;
-    }
+    font-size:38px;
 
-    .why-icon {
-      font-size: 30px;
+    line-height:1.1;
+}
 
-      margin-bottom: 13px;
-    }
+.panel p{
+    color:var(--muted);
+}
 
-    .why-card h3 {
-      font-size: 18px;
+.checks{
+    display:grid;
 
-      margin-bottom: 10px;
-    }
+    gap:15px;
 
-    .why-card p {
-      color: #aeb5c7;
+    margin-top:22px;
+}
 
-      font-size: 14px;
+.check{
+    display:flex;
 
-      line-height: 1.75;
-    }
+    gap:12px;
+}
 
-    /* =====================================================
-       REVIEWS
-    ===================================================== */
+.check > span{
+    color:var(--green);
 
-    .reviews-grid {
-      display: grid;
+    font-weight:900;
+}
 
-      grid-template-columns: repeat(3, 1fr);
+.check b{
+    display:block;
+}
 
-      gap: 20px;
-    }
+.check small{
+    color:var(--muted);
+}
 
-    .review-card {
-      padding: 30px;
+.timeline{
+    display:grid;
 
-      background: white;
+    gap:16px;
+}
 
-      border: 1px solid #e9ecf3;
+.timeline .card{
+    display:grid;
 
-      border-radius: 25px;
+    grid-template-columns:
+    70px 1fr;
 
-      box-shadow: 0 15px 45px rgba(30, 35, 75, 0.045);
-    }
+    gap:20px;
+}
 
-    .stars {
-      color: #f5b900;
+.year{
+    color:var(--blue);
 
-      letter-spacing: 3px;
+    font-size:22px;
 
-      margin-bottom: 18px;
+    font-weight:900;
+}
 
-      font-size: 17px;
-    }
 
-    .review-text {
-      color: #5d6679;
+/* =====================================================
+   REVIEWS
+===================================================== */
 
-      font-size: 14px;
+.review{
+    display:flex;
 
-      line-height: 1.8;
+    flex-direction:column;
 
-      margin-bottom: 20px;
-    }
+    min-height:230px;
+}
 
-    .review-author {
-      font-weight: 850;
+.stars{
+    margin-bottom:12px;
 
-      color: #20283a;
-    }
+    color:#ffd85a;
 
-    .review-source {
-      color: #8a92a4;
+    letter-spacing:2px;
 
-      font-size: 12px;
+    font-size:18px;
+}
 
-      margin-top: 4px;
-    }
+.review p{
+    flex:1;
 
-    .review-disclaimer {
-      margin-top: 22px;
+    color:#dbe2f4;
 
-      color: #8a92a4;
+    font-size:14px;
+}
 
-      font-size: 12px;
-    }
+.who{
+    margin-top:18px;
 
-    /* =====================================================
-       FAQ
-    ===================================================== */
+    color:var(--muted);
 
-    .faq-container {
-      max-width: 900px;
+    font-size:12px;
+}
 
-      margin: 0 auto;
-    }
 
-    .faq-item {
-      background: white;
+/* =====================================================
+   FAQ
+===================================================== */
 
-      border: 1px solid #e8ebf2;
+.faq{
+    display:grid;
 
-      border-radius: 18px;
+    gap:12px;
 
-      margin-bottom: 12px;
+    max-width:850px;
+}
 
-      overflow: hidden;
+.faq-item{
+    overflow:hidden;
 
-      transition: 0.25s ease;
-    }
+    border:
+    1px solid var(--border);
 
-    .faq-question {
-      width: 100%;
+    border-radius:18px;
 
-      border: 0;
-      background: transparent;
+    background:
+    rgba(255,255,255,.03);
+}
 
-      padding: 21px 22px;
+.faq-q{
+    width:100%;
 
-      display: flex;
+    padding:20px;
 
-      justify-content: space-between;
+    display:flex;
 
-      align-items: center;
+    justify-content:space-between;
 
-      gap: 20px;
+    gap:20px;
 
-      text-align: left;
+    border:0;
 
-      color: #273044;
+    background:none;
 
-      font-size: 15px;
+    color:white;
 
-      font-weight: 800;
+    text-align:left;
 
-      cursor: pointer;
-    }
+    font-size:15px;
 
-    .faq-plus {
-      flex: 0 0 auto;
+    font-weight:800;
 
-      width: 30px;
-      height: 30px;
+    cursor:pointer;
+}
 
-      display: grid;
-      place-items: center;
+.faq-a{
+    max-height:0;
 
-      border-radius: 50%;
+    overflow:hidden;
 
-      background: #efeeff;
+    padding:
+    0 20px;
 
-      color: #645cff;
+    color:var(--muted);
 
-      font-size: 21px;
+    transition:
+    max-height .3s,
+    padding .3s;
+}
 
-      transition: 0.3s ease;
-    }
+.faq-item.open .faq-a{
+    max-height:180px;
 
-    .faq-answer {
-      max-height: 0;
+    padding:
+    0 20px 20px;
+}
 
-      overflow: hidden;
 
-      transition: max-height 0.35s ease;
-    }
+/* =====================================================
+   GALLERY
+===================================================== */
 
-    .faq-answer p {
-      padding: 0 22px 22px;
+.gallery{
+    display:grid;
 
-      color: #6c7588;
+    grid-template-columns:
+    repeat(3,1fr);
 
-      font-size: 14px;
+    gap:16px;
+}
 
-      line-height: 1.8;
-    }
+.photo{
+    min-height:230px;
 
-    .faq-item.active .faq-answer {
-      max-height: 250px;
-    }
+    display:grid;
+    place-items:center;
 
-    .faq-item.active .faq-plus {
-      transform: rotate(45deg);
-    }
+    padding:20px;
 
-    /* =====================================================
-       CONTACT
-    ===================================================== */
+    text-align:center;
 
-    .contact-grid {
-      display: grid;
+    border:
+    1px solid var(--border);
 
-      grid-template-columns: 1fr 1fr;
+    border-radius:24px;
 
-      gap: 25px;
+    background:
+    radial-gradient(
+        circle at 30% 20%,
+        rgba(124,92,255,.22),
+        transparent 42%
+    ),
+    rgba(255,255,255,.035);
 
-      margin-top: 40px;
-    }
+    transition:.3s;
+}
 
-    .contact-card {
-      padding: 32px;
+.photo:hover{
+    transform:scale(1.02);
+}
 
-      background: white;
+.photo span{
+    font-size:50px;
+}
 
-      border: 1px solid #e9ecf3;
+.photo p{
+    margin-top:7px;
 
-      border-radius: 25px;
+    color:#dce3f5;
 
-      box-shadow: 0 15px 45px rgba(20, 30, 60, 0.04);
-    }
+    font-weight:800;
+}
 
-    .contact-item {
-      display: flex;
+.photo small{
+    color:#7f89a3;
+}
 
-      align-items: flex-start;
 
-      gap: 14px;
+/* =====================================================
+   CONTACT
+===================================================== */
 
-      padding: 15px 0;
+.contact{
+    display:grid;
 
-      border-bottom: 1px solid #edf0f5;
-    }
+    grid-template-columns:
+    1fr .8fr;
 
-    .contact-item:last-child {
-      border-bottom: 0;
-    }
+    gap:20px;
+}
 
-    .contact-icon {
-      width: 42px;
-      height: 42px;
+.contact-card{
+    padding:33px;
 
-      display: grid;
-      place-items: center;
+    border:
+    1px solid var(--border);
 
-      flex: 0 0 auto;
+    border-radius:28px;
 
-      border-radius: 13px;
+    background:
+    linear-gradient(
+        145deg,
+        rgba(124,92,255,.14),
+        rgba(255,255,255,.03)
+    );
+}
 
-      background: #efeeff;
+.contact-card h2{
+    margin:
+    10px 0;
 
-      font-size: 19px;
-    }
+    font-size:42px;
+}
 
-    .contact-item strong {
-      display: block;
+.contact-list{
+    display:grid;
 
-      margin-bottom: 3px;
+    gap:18px;
 
-      font-size: 14px;
-    }
+    margin-top:25px;
+}
 
-    .contact-item span,
-    .contact-item a {
-      color: #70798c;
+.contact-row{
+    display:flex;
 
-      font-size: 14px;
+    gap:13px;
+}
 
-      line-height: 1.6;
-    }
+.contact-row > span{
+    font-size:24px;
+}
 
-    .contact-item a:hover {
-      color: #645cff;
-    }
+.contact-row b{
+    display:block;
+}
 
-    .map-card {
-      min-height: 100%;
+.contact-row small{
+    color:var(--muted);
+}
 
-      padding: 32px;
+.map{
+    min-height:300px;
 
-      border-radius: 25px;
+    display:flex;
 
-      background:
-        linear-gradient(
-          135deg,
-          rgba(100,92,255,0.95),
-          rgba(0,169,255,0.9)
-        );
+    flex-direction:column;
 
-      color: white;
+    align-items:center;
+    justify-content:center;
 
-      position: relative;
+    text-align:center;
+}
 
-      overflow: hidden;
+.map-icon{
+    margin-bottom:10px;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+    font-size:60px;
+}
 
-    .map-card::before,
-    .map-card::after {
-      content: "";
 
-      position: absolute;
+/* =====================================================
+   PAGE SYSTEM
+===================================================== */
 
-      border-radius: 50%;
+.page{
+    display:none;
+}
 
-      background: rgba(255,255,255,0.1);
-    }
+.page.active{
+    display:block;
+}
 
-    .map-card::before {
-      width: 270px;
-      height: 270px;
+.page-title{
+    padding:
+    155px 0 70px;
 
-      top: -130px;
-      right: -110px;
-    }
+    text-align:center;
+}
 
-    .map-card::after {
-      width: 180px;
-      height: 180px;
+.page-title h1{
+    margin:
+    15px 0;
 
-      bottom: -100px;
-      left: -70px;
-    }
+    font-size:
+    clamp(43px,7vw,72px);
 
-    .map-content {
-      position: relative;
-      z-index: 2;
-    }
+    line-height:1;
 
-    .map-card h3 {
-      font-size: 30px;
+    letter-spacing:-3px;
+}
 
-      line-height: 1.1;
+.page-title p{
+    max-width:700px;
 
-      margin-bottom: 12px;
-    }
+    margin:auto;
 
-    .map-card p {
-      opacity: 0.9;
+    color:var(--muted);
 
-      line-height: 1.8;
+    font-size:17px;
+}
 
-      margin-bottom: 25px;
-    }
 
-    .map-btn {
-      display: inline-flex;
+/* =====================================================
+   WHATSAPP
+===================================================== */
 
-      width: fit-content;
+.whatsapp{
+    position:fixed;
 
-      padding: 13px 18px;
+    right:20px;
+    bottom:20px;
 
-      border-radius: 13px;
+    z-index:900;
 
-      background: white;
+    width:61px;
+    height:61px;
 
-      color: #5149df;
+    display:grid;
+    place-items:center;
 
-      font-size: 14px;
+    border-radius:50%;
 
-      font-weight: 850;
+    background:#25D366;
 
-      transition: 0.25s ease;
-    }
+    color:white;
 
-    .map-btn:hover {
-      transform: translateY(-3px);
-    }
+    font-size:26px;
 
-    /* =====================================================
-       CTA
-    ===================================================== */
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.35);
 
-    .cta-wrapper {
-      margin: 70px 7%;
+    animation:
+    breathe 2.4s infinite;
+}
 
-      padding: 75px 35px;
 
-      border-radius: 35px;
+/* =====================================================
+   FOOTER
+===================================================== */
 
-      text-align: center;
+footer{
+    padding:
+    30px 0 50px;
 
-      position: relative;
+    border-top:
+    1px solid var(--border);
 
-      overflow: hidden;
+    text-align:center;
 
-      color: white;
+    color:var(--muted);
 
-      background:
-        linear-gradient(120deg, #645cff, #008fff);
-    }
+    font-size:12px;
+}
 
-    .cta-wrapper::before,
-    .cta-wrapper::after {
-      content: "";
 
-      position: absolute;
+/* =====================================================
+   ANIMATIONS
+===================================================== */
 
-      border-radius: 50%;
+.reveal{
+    opacity:0;
 
-      background: rgba(255,255,255,0.11);
-    }
+    transform:
+    translateY(25px);
 
-    .cta-wrapper::before {
-      width: 260px;
-      height: 260px;
+    transition:
+    opacity .7s,
+    transform .7s;
+}
 
-      left: -120px;
-      top: -150px;
-    }
+.reveal.show{
+    opacity:1;
 
-    .cta-wrapper::after {
-      width: 240px;
-      height: 240px;
+    transform:none;
+}
 
-      right: -100px;
-      bottom: -160px;
-    }
+@keyframes pulse{
 
-    .cta-content {
-      position: relative;
+    50%{
+        transform:scale(1.08);
 
-      z-index: 2;
+        opacity:.35;
     }
-
-    .cta-wrapper h2 {
-      font-size: clamp(34px, 5vw, 54px);
-
-      line-height: 1.05;
 
-      letter-spacing: -2px;
+}
 
-      margin-bottom: 14px;
-    }
+@keyframes spin{
 
-    .cta-wrapper p {
-      opacity: 0.9;
-
-      margin-bottom: 25px;
+    to{
+        transform:rotate(360deg);
     }
-
-    .cta-wrapper .btn-primary {
-      background: white;
 
-      color: #5149df;
+}
 
-      box-shadow: none;
-    }
+@keyframes floating{
 
-    .cta-wrapper .btn-primary:hover {
-      box-shadow: 0 15px 35px rgba(0,0,0,0.16);
+    50%{
+        transform:translateY(-10px);
     }
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
 
-    footer {
-      padding: 48px 7%;
+}
 
-      background: #0d1123;
+@keyframes breathe{
 
-      color: white;
+    50%{
+        transform:scale(1.07);
+    }
 
-      display: flex;
+}
 
-      justify-content: space-between;
 
-      align-items: flex-start;
+/* =====================================================
+   MOBILE
+===================================================== */
 
-      gap: 30px;
+@media(max-width:900px){
 
-      flex-wrap: wrap;
+    .nav-links{
+        display:none;
     }
 
-    .footer-brand {
-      max-width: 350px;
+    .menu{
+        display:block;
     }
 
-    .footer-brand h3 {
-      font-size: 20px;
+    .nav.mobile .nav-links{
 
-      margin-bottom: 8px;
-    }
+        position:absolute;
 
-    .footer-brand p {
-      color: #969db0;
+        top:73px;
 
-      font-size: 13px;
+        left:4%;
+        right:4%;
 
-      line-height: 1.7;
-    }
+        display:flex;
 
-    .footer-links {
-      display: flex;
+        flex-direction:column;
 
-      gap: 22px;
+        align-items:stretch;
 
-      flex-wrap: wrap;
-    }
+        padding:20px;
 
-    .footer-links a {
-      color: #bcc2d1;
+        background:
+        rgba(7,11,25,.98);
 
-      font-size: 13px;
+        border:
+        1px solid var(--border);
 
-      transition: 0.25s ease;
+        border-radius:20px;
     }
 
-    .footer-links a:hover {
-      color: white;
+    .nav.mobile .nav-links a{
+        padding:9px;
     }
-
-    .footer-bottom {
-      width: 100%;
-
-      padding-top: 25px;
-
-      margin-top: 15px;
-
-      border-top: 1px solid rgba(255,255,255,0.08);
 
-      color: #7e879b;
-
-      font-size: 12px;
+    .hero-grid,
+    .about,
+    .contact{
+        grid-template-columns:1fr;
     }
-
-    /* =====================================================
-       FLOATING WHATSAPP
-    ===================================================== */
-
-    .whatsapp-float {
-      position: fixed;
-
-      right: 22px;
-      bottom: 22px;
-
-      width: 62px;
-      height: 62px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
 
-      border-radius: 50%;
-
-      background: #25d366;
-
-      color: white;
-
-      font-size: 29px;
-
-      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-
-      z-index: 9999;
-
-      animation: whatsappPulse 2.3s infinite;
-
-      transition: 0.25s ease;
+    .grid3{
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
-    .whatsapp-float:hover {
-      transform: scale(1.1);
+    .gallery{
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
-    /* =====================================================
-       SCROLL REVEAL
-    ===================================================== */
+    .visual{
+        min-height:440px;
+    }
 
-    .reveal {
-      opacity: 0;
+}
 
-      transform: translateY(30px);
+@media(max-width:600px){
 
-      transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
+    section{
+        padding:75px 0;
     }
-
-    .reveal.visible {
-      opacity: 1;
 
-      transform: translateY(0);
+    .hero{
+        padding-top:120px;
     }
 
-    /* =====================================================
-       ANIMATIONS
-    ===================================================== */
-
-    @keyframes heroAppear {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .hero h1{
+        letter-spacing:-2px;
     }
 
-    @keyframes floating {
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-18px);
-      }
+    .grid3,
+    .grid2,
+    .gallery{
+        grid-template-columns:1fr;
     }
 
-    @keyframes cardFloat {
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
+    .ring{
+        width:350px;
+        height:350px;
     }
 
-    @keyframes orbGlow {
-      0%,
-      100% {
-        opacity: 0.65;
-      }
-
-      50% {
-        opacity: 1;
-      }
+    .method{
+        width:275px;
     }
 
-    @keyframes orbitSpin {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
+    .float{
+        font-size:10px;
     }
 
-    @keyframes whatsappPulse {
-      0% {
-        box-shadow:
-          0 0 0 0 rgba(37, 211, 102, 0.45),
-          0 12px 30px rgba(0,0,0,0.2);
-      }
-
-      70% {
-        box-shadow:
-          0 0 0 17px rgba(37, 211, 102, 0),
-          0 12px 30px rgba(0,0,0,0.2);
-      }
-
-      100% {
-        box-shadow:
-          0 0 0 0 rgba(37, 211, 102, 0),
-          0 12px 30px rgba(0,0,0,0.2);
-      }
+    .f1{
+        left:-5px;
     }
 
-    /* =====================================================
-       TABLET
-    ===================================================== */
-
-    @media (max-width: 1000px) {
-      .hero {
-        gap: 30px;
-      }
-
-      .hero-graphic {
-        transform: scale(0.85);
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stats-grid,
-      .services-grid,
-      .why-grid,
-      .reviews-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
+    .f2{
+        right:-5px;
     }
-
-    /* =====================================================
-       MOBILE
-    ===================================================== */
-
-    @media (max-width: 760px) {
-      nav {
-        height: 70px;
-
-        padding: 0 6%;
-      }
-
-      .menu-button {
-        display: grid;
-        place-items: center;
-      }
 
-      .nav-links {
-        position: absolute;
-
-        top: 70px;
-        left: 0;
-
-        width: 100%;
-
-        padding: 24px 6%;
-
-        display: none;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 5px;
-
-        background: white;
-
-        box-shadow: 0 20px 40px rgba(10,20,45,0.08);
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-links a {
-        padding: 13px 0;
-      }
-
-      .nav-cta {
-        text-align: center;
-
-        margin-top: 8px;
-
-        padding: 13px;
-      }
-
-      .hero {
-        min-height: auto;
-
-        padding: 130px 6% 70px;
-
-        flex-direction: column;
-
-        text-align: center;
-      }
-
-      .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-buttons {
-        justify-content: center;
-      }
-
-      .hero-graphic {
-        width: 300px;
-        height: 300px;
-
-        transform: none;
-
-        margin-top: 15px;
-      }
-
-      .hero-orb {
-        width: 225px;
-        height: 225px;
-
-        top: 38px;
-        left: 38px;
-      }
-
-      .orb-text {
-        font-size: 29px;
-      }
-
-      .orbit {
-        width: 270px;
-        height: 270px;
-
-        top: 15px;
-        left: 15px;
-      }
-
-      .floating-card {
-        padding: 10px 13px;
-
-        font-size: 11px;
-      }
-
-      .card-a {
-        right: -5px;
-        top: 0;
-      }
-
-      .card-b {
-        left: -10px;
-        bottom: 45px;
-      }
-
-      .card-c {
-        right: 5px;
-        bottom: 3px;
-      }
-
-      section {
-        padding: 75px 6%;
-      }
-
-      .stats-grid,
-      .services-grid,
-      .why-grid,
-      .reviews-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .why-wrapper {
-        margin: 25px 3%;
-
-        padding: 65px 7%;
-
-        border-radius: 28px;
-      }
-
-      .cta-wrapper {
-        margin: 45px 5%;
-
-        padding: 58px 24px;
-
-        border-radius: 28px;
-      }
-
-      .about-visual {
-        min-height: 300px;
-      }
-
-      .about-word {
-        font-size: 48px;
-      }
-
-      footer {
-        padding: 45px 6%;
-
-        flex-direction: column;
-      }
-
-      .whatsapp-float {
-        width: 57px;
-        height: 57px;
-
-        right: 16px;
-        bottom: 16px;
-      }
+    .f3{
+        left:0;
     }
 
-    /* =====================================================
-       SMALL MOBILE
-    ===================================================== */
-
-    @media (max-width: 420px) {
-      .hero h1 {
-        font-size: 43px;
-        letter-spacing: -2.5px;
-      }
-
-      .hero-description {
-        font-size: 16px;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero-buttons {
-        width: 100%;
-      }
-
-      .hero-buttons a {
-        width: 100%;
-      }
-
-      .section-header h2 {
-        font-size: 35px;
-      }
-
-      .contact-card,
-      .map-card {
-        padding: 25px;
-      }
+    .nav > .primary{
+        display:none;
     }
-
-    /* =====================================================
-       REDUCED MOTION
-    ===================================================== */
 
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
+    .contact-card h2{
+        font-size:34px;
+    }
 
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
+}
 
-        transition-duration: 0.01ms !important;
-      }
-    }
-  </style>
+</style>
 </head>
+
 
 <body>
 
-  <!-- =====================================================
-       NAVBAR
-  ===================================================== -->
-
-  <nav>
-    <a href="#top" class="logo">
-      MIND <span class="logo-highlight">DRILL</span>
-    </a>
-
-    <button
-      class="menu-button"
-      id="menuButton"
-      aria-label="Open navigation"
-      aria-expanded="false"
-    >
-      ☰
-    </button>
-
-    <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#why">Why Us</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#faq">FAQ</a>
 
-      <a
-        href="https://wa.me/917298548416?text=Hello%20Sir%2C%20I%20would%20like%20to%20know%20more%20about%20Mind%20Drill%20Classes."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="nav-cta"
-      >
-        WhatsApp Sir
-      </a>
-    </div>
-  </nav>
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
+<header id="header">
 
-  <!-- =====================================================
-       HERO
-  ===================================================== -->
+<div class="container nav" id="nav">
 
-  <header class="hero" id="top">
-
-    <div class="hero-content">
-
-      <div class="hero-badge">
-        📍 Gandhinagar / Guru Nanak Nagar, Jammu
-      </div>
 
-      <h1>
-        Sharpen Your Mind.
-        <br />
-        <span class="gradient-text">Build Your Future.</span>
-      </h1>
+<a
+href="#home"
+class="logo"
+onclick="showPage('home');return false;"
+>
 
-      <p class="hero-description">
-        Welcome to Mind Drill Classes — an education-focused
-        establishment in Jammu, dedicated to providing students
-        with a supportive and professional learning environment.
-      </p>
+<div class="logo-mark">
+MD
+</div>
 
-      <div class="hero-buttons">
+<div>
 
-        <!-- DIRECT WHATSAPP -->
+Mind Drill Classes
 
-        <a
-          href="https://wa.me/917298548416?text=Hello%20Sir%2C%20I%20would%20like%20to%20know%20more%20about%20Mind%20Drill%20Classes."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-        >
-          💬 Chat with Sir
-        </a>
+<small>
+JAMMU • LEARN • GROW
+</small>
 
-        <a
-          href="#services"
-          class="btn btn-secondary"
-        >
-          Explore Classes ↓
-        </a>
+</div>
 
-      </div>
+</a>
 
-    </div>
 
+<nav class="nav-links">
 
-    <!-- ANIMATED GRAPHIC -->
+<a
+href="#home"
+data-page="home"
+onclick="showPage('home')"
+>
+Home
+</a>
 
-    <div class="hero-graphic">
+<a
+href="#about"
+data-page="about"
+onclick="showPage('about')"
+>
+About
+</a>
 
-      <div class="orbit">
-        <div class="orbit-dot"></div>
-      </div>
+<a
+href="#classes"
+data-page="classes"
+onclick="showPage('classes')"
+>
+Classes
+</a>
 
-      <div class="hero-orb">
-        <div class="orb-text">
-          MIND
-        </div>
-      </div>
+<a
+href="#student-zone"
+data-page="student-zone"
+onclick="showPage('student-zone')"
+>
+Student Zone
+</a>
 
-      <div class="floating-card card-a">
-        🧠 Learn Better
-      </div>
+<a
+href="#gallery"
+data-page="gallery"
+onclick="showPage('gallery')"
+>
+Gallery
+</a>
 
-      <div class="floating-card card-b">
-        📚 Student Focused
-      </div>
+<a
+href="#contact"
+data-page="contact"
+onclick="showPage('contact')"
+>
+Contact
+</a>
 
-      <div class="floating-card card-c">
-        ✨ Jammu
-      </div>
+</nav>
 
-    </div>
 
-  </header>
+<a
+class="btn primary"
+target="_blank"
+href="https://wa.me/917298548416?text=Hello%20Sir%2C%20I%20would%20like%20to%20know%20more%20about%20Mind%20Drill%20Classes."
+>
+💬 WhatsApp
+</a>
 
 
-  <!-- =====================================================
-       STATS
-  ===================================================== -->
+<button
+class="menu"
+id="menuBtn"
+>
+☰
+</button>
 
-  <section class="stats-section">
 
-    <div class="stats-grid">
+</div>
 
-      <div class="stat-card reveal">
-        <h3>2023</h3>
-        <p>Established</p>
-      </div>
+</header>
 
-      <div class="stat-card reveal">
-        <h3>5.0</h3>
-        <p>Public rating</p>
-      </div>
 
-      <div class="stat-card reveal">
-        <h3>3+</h3>
-        <p>Public ratings</p>
-      </div>
 
-      <div class="stat-card reveal">
-        <h3>Jammu</h3>
-        <p>Jammu & Kashmir</p>
-      </div>
+<!-- =====================================================
+     HOME
+===================================================== -->
 
-    </div>
+<main
+id="home"
+class="page active"
+>
 
-  </section>
 
+<section class="hero">
 
-  <!-- =====================================================
-       ABOUT
-  ===================================================== -->
+<div class="container hero-grid">
 
-  <section id="about">
 
-    <div class="about-grid">
+<div class="reveal">
 
-      <div class="about-visual reveal">
-        <div class="about-word">
-          MIND
-        </div>
-      </div>
 
+<div class="badge">
 
-      <div class="about-content reveal">
+<span class="dot"></span>
 
-        <div class="section-header">
+Student-focused learning in Jammu
 
-          <span class="section-kicker">
-            About Mind Drill
-          </span>
+</div>
 
-          <h2>
-            A local name with a growing vision.
-          </h2>
 
-        </div>
+<h1>
 
-        <p>
-          Mind Drill Classes is based in Jammu and provides
-          education-related services with a student-focused
-          approach.
-        </p>
+Sharpen your mind.
 
-        <p>
-          The institute aims to provide learners and families
-          with a convenient place to seek education-related
-          assistance and guidance.
-        </p>
+<br>
 
-        <div class="check-list">
+<span class="grad">
+Build your future.
+</span>
 
-          <div class="check-item">
-            <span class="check-icon">✓</span>
-            Education-focused service
-          </div>
+</h1>
 
-          <div class="check-item">
-            <span class="check-icon">✓</span>
-            Student-oriented approach
-          </div>
 
-          <div class="check-item">
-            <span class="check-icon">✓</span>
-            Convenient Jammu location
-          </div>
+<p>
 
-          <div class="check-item">
-            <span class="check-icon">✓</span>
-            Direct WhatsApp communication
-          </div>
+Focused academic guidance, clear concepts
+and dedicated support to help students
+learn with confidence.
 
-        </div>
+</p>
 
-      </div>
 
-    </div>
+<div class="actions">
 
-  </section>
+<a
+class="btn primary"
+target="_blank"
+href="https://wa.me/917298548416?text=Hello%20Sir%2C%20I%20would%20like%20to%20know%20more%20about%20Mind%20Drill%20Classes."
+>
+💬 Chat with Sir
+</a>
 
 
-  <!-- =====================================================
-       SERVICES
-  ===================================================== -->
+<a
+class="btn ghost"
+href="#classes"
+onclick="showPage('classes')"
+>
+Explore Classes →
+</a>
 
-  <section id="services">
+</div>
 
-    <div class="section-header reveal">
 
-      <span class="section-kicker">
-        What We Offer
-      </span>
+<div class="trust">
 
-      <h2>
-        Education support built around students.
-      </h2>
+<span>✓ Concept clarity</span>
 
-      <p>
-        Mind Drill Classes provides education-related support
-        and student assistance. Contact Sir directly on
-        WhatsApp for current classes, subjects and admission
-        information.
-      </p>
+<span>✓ Doubt support</span>
 
-    </div>
+<span>✓ Exam preparation</span>
 
+</div>
 
-    <div class="services-grid">
+</div>
 
-      <div class="service-card reveal">
 
-        <div class="service-icon">
-          📚
-        </div>
 
-        <h3>
-          Education Support
-        </h3>
+<!-- HERO VISUAL -->
 
-        <p>
-          Assistance focused on education-related needs,
-          student questions and learning support.
-        </p>
+<div class="visual reveal">
 
-      </div>
+<div class="glow"></div>
 
+<div class="ring"></div>
 
-      <div class="service-card reveal">
 
-        <div class="service-icon">
-          🎓
-        </div>
+<div class="float f1">
+🧠 Think • Understand
+</div>
 
-        <h3>
-          Student Guidance
-        </h3>
+<div class="float f2">
+🎯 Practise • Improve
+</div>
 
-        <p>
-          Speak directly with the institute to find out
-          which classes and learning options are currently
-          available.
-        </p>
+<div class="float f3">
+💬 Ask • Learn
+</div>
 
-      </div>
 
+<div class="method">
 
-      <div class="service-card reveal">
+<div class="eyebrow">
+THE MIND DRILL METHOD
+</div>
 
-        <div class="service-icon">
-          💬
-        </div>
+<h3>
+Learn smarter.
+</h3>
 
-        <h3>
-          Direct Communication
-        </h3>
+<p>
+A learning cycle instead of a progress bar.
+</p>
 
-        <p>
-          Get in touch instantly through WhatsApp using
-          the enquiry buttons throughout this website.
-        </p>
 
-      </div>
+<div class="step">
 
-    </div>
+<div class="num">
+01
+</div>
 
-  </section>
+<div>
 
+<b>
+Understand
+</b>
 
-  <!-- =====================================================
-       WHY CHOOSE US
-  ===================================================== -->
+<span>
+Build the concept clearly.
+</span>
 
-  <section id="why">
+</div>
 
-    <div class="why-wrapper">
+</div>
 
-      <div class="section-header reveal">
 
-        <span class="section-kicker">
-          Why Mind Drill
-        </span>
+<div class="step">
 
-        <h2>
-          Simple. Accessible. Student-focused.
-        </h2>
+<div class="num">
+02
+</div>
 
-        <p>
-          A modern way to connect students and families with
-          an education-focused local institute.
-        </p>
+<div>
 
-      </div>
+<b>
+Practise
+</b>
 
+<span>
+Apply it with focused questions.
+</span>
 
-      <div class="why-grid">
+</div>
 
-        <div class="why-card reveal">
+</div>
 
-          <div class="why-icon">
-            📍
-          </div>
 
-          <h3>
-            Convenient Location
-          </h3>
+<div class="step">
 
-          <p>
-            Located at 3/B, Guru Nanak Nagar, Jammu,
-            Jammu and Kashmir 180004.
-          </p>
+<div class="num">
+03
+</div>
 
-        </div>
+<div>
 
+<b>
+Master
+</b>
 
-        <div class="why-card reveal">
+<span>
+Revise, solve doubts and improve.
+</span>
 
-          <div class="why-icon">
-            🤝
-          </div>
+</div>
 
-          <h3>
-            Direct Support
-          </h3>
+</div>
 
-          <p>
-            Students and parents can contact Sir directly
-            through WhatsApp for enquiries and information.
-          </p>
+</div>
 
-        </div>
+</div>
 
+</div>
 
-        <div class="why-card reveal">
+</section>
 
-          <div class="why-icon">
-            🚀
-          </div>
 
-          <h3>
-            Student Focus
-          </h3>
 
-          <p>
-            The website puts learning, communication and
-            easy access to information at the centre.
-          </p>
+<!-- EXPLORE -->
 
-        </div>
+<section>
 
-      </div>
+<div class="container">
 
-    </div>
 
-  </section>
+<div class="section-head reveal">
 
+<div class="eyebrow">
+EXPLORE
+</div>
 
-  <!-- =====================================================
-       REVIEWS
-  ===================================================== -->
+<h2>
+Everything students need.
+</h2>
 
-  <section id="reviews">
+<p>
+Explore Mind Drill Classes, academic support,
+student resources and more.
+</p>
 
-    <div class="section-header reveal">
+</div>
 
-      <span class="section-kicker">
-        Reviews
-      </span>
 
-      <h2>
-        What people are saying.
-      </h2>
+<div class="grid3">
 
-      <p>
-        The following feedback is based on publicly available
-        review information. Reviews have not been invented.
-      </p>
 
-    </div>
+<div class="card reveal">
 
+<div class="icon">
+🏫
+</div>
 
-    <div class="reviews-grid">
+<h3>
+About Us
+</h3>
 
-      <article class="review-card reveal">
+<p>
+Learn about Mind Drill Classes,
+our approach and our vision.
+</p>
 
-        <div class="stars">
-          ★★★★★
-        </div>
+<a
+class="pill"
+href="#about"
+onclick="showPage('about')"
+>
+Explore →
+</a>
 
-        <p class="review-text">
-          “Mind drill classes offers a nurturing environment
-          with excellent faculty, modern facilities, and a
-          strong focus on holistic development.”
-        </p>
+</div>
 
-        <div class="review-author">
-          Kavya Sharma
-        </div>
 
-        <div class="review-source">
-          Public review • April 25, 2025
-        </div>
+<div class="card reveal">
 
-      </article>
+<div class="icon">
+📚
+</div>
 
+<h3>
+Classes
+</h3>
 
-      <article class="review-card reveal">
+<p>
+Explore academic support,
+practice and preparation.
+</p>
 
-        <div class="stars">
-          ★★★★★
-        </div>
+<a
+class="pill"
+href="#classes"
+onclick="showPage('classes')"
+>
+Explore →
+</a>
 
-        <p class="review-text">
-          “Too Good”
-        </p>
+</div>
 
-        <div class="review-author">
-          Ajay Sharma
-        </div>
 
-        <div class="review-source">
-          Public review • March 21, 2025
-        </div>
+<div class="card reveal">
 
-      </article>
+<div class="icon">
+🎓
+</div>
 
+<h3>
+Student Zone
+</h3>
 
-      <article class="review-card reveal">
+<p>
+Study tips and student-focused
+learning resources.
+</p>
 
-        <div class="stars">
-          ★★★★★
-        </div>
+<a
+class="pill"
+href="#student-zone"
+onclick="showPage('student-zone')"
+>
+Explore →
+</a>
 
-        <p class="review-text">
-          Mind Drill Classes is publicly listed with a
-          5.0/5 rating based on three ratings.
-        </p>
+</div>
 
-        <div class="review-author">
-          Public listing
-        </div>
 
-        <div class="review-source">
-          Rating information
-        </div>
+</div>
 
-      </article>
+</div>
 
-    </div>
+</section>
 
 
-    <p class="review-disclaimer">
-      Reviews and rating information are presented as
-      publicly available information. The original source
-      should be retained when these are published.
-    </p>
 
-  </section>
+<!-- REVIEWS -->
 
+<section>
 
-  <!-- =====================================================
-       FAQ
-  ===================================================== -->
+<div class="container">
 
-  <section id="faq">
 
-    <div class="section-header reveal">
+<div class="section-head reveal">
 
-      <span class="section-kicker">
-        FAQ
-      </span>
+<div class="eyebrow">
+STUDENT VOICES
+</div>
 
-      <h2>
-        Frequently asked questions.
-      </h2>
+<h2>
+What our students are saying.
+</h2>
 
-      <p>
-        Quick answers for students and parents.
-      </p>
+<p>
+Real experiences from students at
+Mind Drill Classes.
+</p>
 
-    </div>
+</div>
 
 
-    <div class="faq-container">
+<div class="grid3">
 
 
-      <div class="faq-item reveal">
+<!-- SURYA -->
 
-        <button class="faq-question">
+<div class="card review reveal">
 
-          <span>
-            Where is Mind Drill Classes located?
-          </span>
+<div class="stars">
+★★★★★
+</div>
 
-          <span class="faq-plus">
-            +
-          </span>
+<p>
+“Excellent studies and excellent way
+of teaching.”
+</p>
 
-        </button>
+<div class="who">
+— Surya · Student
+</div>
 
-        <div class="faq-answer">
+</div>
 
-          <p>
-            Mind Drill Classes is located at 3/B,
-            Guru Nanak Nagar, Jammu, Jammu and Kashmir
-            180004.
-          </p>
 
-        </div>
+<!-- KRISHNA -->
 
-      </div>
+<div class="card review reveal">
 
+<div class="stars">
+★★★★★
+</div>
 
-      <div class="faq-item reveal">
+<p>
+“Best tuition in Nanak Nagar, Jammu.”
+</p>
 
-        <button class="faq-question">
+<div class="who">
+— Krishna Biswal · Student
+</div>
 
-          <span>
-            How can I contact Mind Drill Classes?
-          </span>
+</div>
 
-          <span class="faq-plus">
-            +
-          </span>
 
-        </button>
+<!-- ANGAD -->
 
-        <div class="faq-answer">
+<div class="card review reveal">
 
-          <p>
-            You can call
-            <a
-              href="tel:+917298548416"
-              style="color:#645cff;font-weight:700;"
-            >
-              +91 72985 48416
-            </a>
-            or use any of the WhatsApp buttons on this
-            website to start a direct chat.
-          </p>
+<div class="stars">
+★★★★★
+</div>
 
-        </div>
+<p>
+“A very nice conceptual way of learning.”
+</p>
 
-      </div>
+<div class="who">
+— Angad · Student
+</div>
 
+</div>
 
-      <div class="faq-item reveal">
 
-        <button class="faq-question">
+<!-- KAVYA -->
 
-          <span>
-            Is the same number available on WhatsApp?
-          </span>
+<div class="card review reveal">
 
-          <span class="faq-plus">
-            +
-          </span>
+<div class="stars">
+★★★★★
+</div>
 
-        </button>
+<p>
+“Mind drill classes offers a nurturing
+environment with excellent faculty,
+modern facilities, and a strong focus
+on holistic development.”
+</p>
 
-        <div class="faq-answer">
+<div class="who">
+— Kavya Sharma · Public Review
+</div>
 
-          <p>
-            Yes. The WhatsApp number is
-            +91 72985 48416.
-          </p>
+</div>
 
-        </div>
 
-      </div>
+<!-- AJAY -->
 
+<div class="card review reveal">
 
-      <div class="faq-item reveal">
+<div class="stars">
+★★★★★
+</div>
 
-        <button class="faq-question">
+<p>
+“Too Good.”
+</p>
 
-          <span>
-            How do I enquire about classes?
-          </span>
+<div class="who">
+— Ajay Sharma · Public Review
+</div>
 
-          <span class="faq-plus">
-            +
-          </span>
+</div>
 
-        </button>
 
-        <div class="faq-answer">
+<!-- EXTRA -->
 
-          <p>
-            Tap the “Chat with Sir” or “WhatsApp Sir”
-            button anywhere on the website. WhatsApp will
-            open directly with a pre-filled enquiry message.
-          </p>
+<div class="card review reveal">
 
-        </div>
+<div class="stars">
+★★★★★
+</div>
 
-      </div>
+<p>
+Your experience could be featured here.
+</p>
 
+<div class="who">
+— Student Review
+</div>
 
-      <div class="faq-item reveal">
+</div>
 
-        <button class="faq-question">
 
-          <span>
-            What classes or subjects are available?
-          </span>
+</div>
 
-          <span class="faq-plus">
-            +
-          </span>
+</div>
 
-        </button>
+</section>
 
-        <div class="faq-answer">
 
-          <p>
-            Current class and subject availability can change.
-            Please contact Sir directly on WhatsApp for the
-            latest information.
-          </p>
 
-        </div>
+<!-- HOME CONTACT CTA -->
 
-      </div>
+<section>
 
+<div class="container">
 
-      <div class="faq-item reveal">
+<div class="panel reveal">
 
-        <button class="faq-question">
+<div class="eyebrow">
+READY TO START?
+</div>
 
-          <span>
-            How can I get directions?
-          </span>
+<h2>
+Have a question about classes?
+</h2>
 
-          <span class="faq-plus">
-            +
-          </span>
+<p>
+Message Sir directly on WhatsApp
+and ask about classes, subjects,
+batches or timings.
+</p>
 
-        </button>
 
-        <div class="faq-answer">
+<div class="actions">
 
-          <p>
-            Use the “Open in Google Maps” button in the
-            contact section to open directions to the
-            institute.
-          </p>
+<a
+class="btn primary"
+target="_blank"
+href="https://wa.me/917298548416?text=Hello%20Sir%2C%20I%20would%20like%20to%20enquire%20about%20Mind%20Drill%20Classes."
+>
+💬 WhatsApp Now
+</a>
 
-        </div>
 
-      </div>
+<a
+class="btn ghost"
+href="#contact"
+onclick="showPage('contact')"
+>
+Contact Details →
+</a>
 
-    </div>
+</div>
 
-  </section>
+</div>
 
+</div>
 
-  <!-- =====================================================
-       CONTACT
-  ===================================================== -->
+</section>
 
-  <section id="contact">
 
-    <div class="section-header reveal">
+</main>
 
-      <span class="section-kicker">
-        Contact
-      </span>
 
-      <h2>
-        Let's connect.
-      </h2>
 
-      <p>
-        Have a question about classes or admissions?
-        Contact Mind Drill Classes directly.
-      </p>
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
-    </div>
+<main
+id="about"
+class="page"
+>
 
 
-    <div class="contact-grid">
+<section class="page-title">
 
+<div class="container reveal">
 
-      <!-- CONTACT DETAILS -->
+<div class="eyebrow">
+ABOUT US
+</div>
 
-      <div class="contact-card reveal">
+<h1>
 
-        <div class="contact-item">
+More than a classroom.
 
-          <div class="contact-icon">
-            📍
-          </div>
+<br>
 
-          <div>
+<span class="grad">
+A place to grow.
+</span>
 
-            <strong>
-              Address
-            </strong>
+</h1>
 
-            <span>
-              3/B, Guru Nanak Nagar,
-              Jammu, Jammu and Kashmir 180004
-            </span>
+<p>
+Mind Drill Classes is an education-focused
+institute in Jammu, established in April 2023,
+with a focus on learning, clarity and student support.
+</p>
 
-          </div>
+</div>
 
-        </div>
+</section>
 
 
-        <div class="contact-item">
 
-          <div class="contact-icon">
-            📞
-          </div>
+<section>
 
-          <div>
+<div class="container about">
 
-            <strong>
-              Phone
-            </strong>
 
-            <a href="tel:+917298548416">
-              +91 72985 48416
-            </a>
+<div class="panel reveal">
 
-          </div>
+<div class="eyebrow">
+OUR APPROACH
+</div>
 
-        </div>
+<h2>
+Understand → Practise → Master
+</h2>
 
+<p>
+The goal is to help students move from
+confusion to clarity through explanation,
+practice and revision.
+</p>
 
-        <div class="contact-item">
 
-          <div class="contact-icon">
-            💬
-          </div>
+<div class="checks">
 
-          <div>
 
-            <strong>
-              WhatsApp
-            </strong>
+<div class="check">
 
-            <a
-              href="https://wa.me/917298548416?text=Hello%20Sir%2C%20I%20would%20like%20to%20enquire%20about%20Mind%20Drill%20Classes."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Chat directly with Sir
-            </a>
+<span>✓</span>
 
-          </div>
+<div>
 
-        </div>
+<b>
+Clear concepts
+</b>
 
-      </div>
+<small>
+Make difficult topics easier to understand.
+</small>
 
+</div>
 
-      <!-- MAP -->
+</div>
 
-      <div class="map-card reveal">
 
-        <div class="map-content">
+<div class="check">
 
-          <h3>
-            Visit Mind Drill Classes.
-          </h3>
+<span>✓</span>
 
-          <p>
-            3/B, Guru Nanak Nagar,<br />
-            Jammu, Jammu and Kashmir 180004
-          </p>
+<div>
 
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=3%2FB%2C%20Guru%20Nanak%20Nagar%2C%20Jammu%2C%20Jammu%20and%20Kashmir%20180004"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="map-btn"
-          >
-            📍 Open in Google Maps
-          </a>
+<b>
+Consistent practice
+</b>
 
-        </div>
+<small>
+Build confidence through regular problem solving.
+</small>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </section>
 
+<div class="check">
 
-  <!-- =====================================================
-       FINAL CTA
-  ===================================================== -->
+<span>✓</span>
 
-  <section>
+<div>
 
-    <div class="cta-wrapper reveal">
+<b>
+Support when stuck
+</b>
 
-      <div class="cta-content">
+<small>
+Encourage questions and fix learning gaps.
+</small>
 
-        <h2>
-          Ready to start?
-        </h2>
+</div>
 
-        <p>
-          Talk directly with Sir and get the information
-          you need about Mind Drill Classes.
-        </p>
+</div>
 
-        <a
-          href="https://wa.me/917298548416?text=Hello%20Sir%2C%20I%20would%20like%20to%20enquire%20about%20Mind%20Drill%20Classes."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-        >
-          💬 WhatsApp Sir Now
-        </a>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </section>
 
 
-  <!-- =====================================================
-       FOOTER
-  ===================================================== -->
+<div class="timeline">
 
-  <footer>
 
-    <div class="footer-brand">
+<div class="card reveal">
 
-      <h3>
-        MIND DRILL CLASSES
-      </h3>
+<div class="year">
+2023
+</div>
 
-      <p>
-        Education-focused services in
-        Guru Nanak Nagar, Jammu.
-      </p>
+<div>
 
-      <p style="margin-top:8px;">
-        📞 +91 72985 48416
-      </p>
+<h3>
+Mind Drill Classes begins
+</h3>
 
-    </div>
+<p>
+The institute was established in April 2023.
+</p>
 
+</div>
 
-    <div class="footer-links">
+</div>
 
-      <a href="#about">
-        About
-      </a>
 
-      <a href="#services">
-        Services
-      </a>
+<div class="card reveal">
 
-      <a href="#reviews">
-        Reviews
-      </a>
+<div class="year">
+NOW
+</div>
 
-      <a href="#faq">
-        FAQ
-      </a>
+<div>
 
-      <a href="#contact">
-        Contact
-      </a>
+<h3>
+Student-first learning
+</h3>
 
-    </div>
+<p>
+Building a stronger learning environment
+and easier communication for students
+and parents.
+</p>
 
+</div>
 
-    <div class="footer-bottom">
+</div>
 
-      © 2026 Mind Drill Classes. All rights reserved.
 
-    </div>
+</div>
 
-  </footer>
+</div>
 
+</section>
 
-  <!-- =====================================================
-       FLOATING WHATSAPP BUTTON
-  ===================================================== -->
 
-  <a
-    href="https://wa.me/917298548416?text=Hello%20Sir%2C%20I%20would%20like%20to%20enquire%20about%20Mind%20Drill%20Classes."
-    target="_blank"
-    rel="noopener noreferrer"
-    class="whatsapp-float"
-    aria-label="Chat with Mind Drill Classes on WhatsApp"
-    title="Chat with Sir on WhatsApp"
-  >
-    💬
-  </a>
 
+<section>
 
-  <!-- =====================================================
-       JAVASCRIPT
-  ===================================================== -->
+<div class="container">
 
-  <script>
 
-    /* -----------------------------------------------------
-       MOBILE MENU
-    ----------------------------------------------------- */
+<div class="section-head reveal">
 
-    const menuButton =
-      document.getElementById("menuButton");
+<div class="eyebrow">
+OUR VALUES
+</div>
 
-    const navLinks =
-      document.getElementById("navLinks");
+<h2>
+What we believe.
+</h2>
 
+</div>
 
-    menuButton.addEventListener("click", () => {
 
-      const isOpen =
-        navLinks.classList.toggle("active");
+<div class="grid3">
 
-      menuButton.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
 
-      menuButton.textContent =
-        isOpen ? "✕" : "☰";
+<div class="card reveal">
+
+<div class="icon">
+🧠
+</div>
+
+<h3>
+Understanding
+</h3>
+
+<p>
+Strong learning begins with understanding
+the idea behind the answer.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">
+🎯
+</div>
+
+<h3>
+Consistency
+</h3>
+
+<p>
+Regular practice and revision can build
+stronger academic habits.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">
+🤝
+</div>
+
+<h3>
+Support
+</h3>
+
+<p>
+Students should feel comfortable asking
+questions when they need help.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     CLASSES
+===================================================== -->
+
+<main
+id="classes"
+class="page"
+>
+
+
+<section class="page-title">
+
+<div class="container reveal">
+
+<div class="eyebrow">
+CLASSES
+</div>
+
+<h1>
+
+Learn with a
+
+<span class="grad">
+clear plan.
+</span>
+
+</h1>
+
+<p>
+Academic support designed around
+understanding, practice, revision
+and preparation.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="container">
+
+
+<div class="grid3">
+
+
+<div class="card reveal">
+
+<div class="icon">
+📚
+</div>
+
+<h3>
+Academic Classes
+</h3>
+
+<p>
+Structured support for school-level
+learning and regular practice.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">
+🧠
+</div>
+
+<h3>
+Concept Building
+</h3>
+
+<p>
+Turn difficult chapters into
+understandable ideas and steps.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">
+📝
+</div>
+
+<h3>
+Exam Preparation
+</h3>
+
+<p>
+Revision and targeted practice
+for better exam preparation.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">
+💬
+</div>
+
+<h3>
+Doubt Support
+</h3>
+
+<p>
+Questions are part of learning.
+Get help identifying and fixing gaps.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">
+🎯
+</div>
+
+<h3>
+Focused Practice
+</h3>
+
+<p>
+Practise questions that strengthen
+understanding and confidence.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">
+🤝
+</div>
+
+<h3>
+Student Guidance
+</h3>
+
+<p>
+Practical guidance for a more
+consistent study routine.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div
+class="panel reveal"
+style="margin-top:25px"
+>
+
+<div class="eyebrow">
+WANT EXACT DETAILS?
+</div>
+
+<h2>
+Ask about your class,
+subject and batch.
+</h2>
+
+<p>
+Send the student's class/grade
+and subject on WhatsApp.
+</p>
+
+
+<div class="actions">
+
+<a
+class="btn primary"
+target="_blank"
+href="https://wa.me/917298548416?text=Hello%20Sir%2C%20I%20want%20to%20know%20about%20available%20classes%20and%20subjects."
+>
+💬 Ask on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     STUDENT ZONE
+===================================================== -->
+
+<main
+id="student-zone"
+class="page"
+>
+
+
+<section class="page-title">
+
+<div class="container reveal">
+
+<div class="eyebrow">
+STUDENT ZONE
+</div>
+
+<h1>
+
+Your study space.
+
+<br>
+
+<span class="grad">
+Your next step.
+</span>
+
+</h1>
+
+<p>
+Simple study habits that can help
+students become more organised
+and consistent.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="container">
+
+
+<div class="grid2">
+
+
+<div class="card reveal">
+
+<div class="icon">
+1
+</div>
+
+<h3>
+Understand before memorising
+</h3>
+
+<p>
+Ask yourself:
+“Can I explain this concept in my own words?”
+If not, revisit it.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">
+2
+</div>
+
+<h3>
+Practise actively
+</h3>
+
+<p>
+Close the book and solve questions.
+Active recall can be more useful
+than simply rereading.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">
+3
+</div>
+
+<h3>
+Keep a doubt list
+</h3>
+
+<p>
+Write down questions as they appear
+so you can resolve them instead
+of forgetting them.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">
+4
+</div>
+
+<h3>
+Revise regularly
+</h3>
+
+<p>
+Short, repeated revision sessions
+can help keep important ideas fresh.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+<div class="eyebrow">
+QUICK FAQ
+</div>
+
+<h2>
+Need an answer?
+</h2>
+
+</div>
+
+
+<div class="faq">
+
+
+<div class="faq-item reveal">
+
+<button class="faq-q">
+
+How do I ask about classes?
+
+<span>＋</span>
+
+</button>
+
+<div class="faq-a">
+
+Use the WhatsApp button and send
+the student's class/grade and subject.
+
+</div>
+
+</div>
+
+
+<div class="faq-item reveal">
+
+<button class="faq-q">
+
+Where is the institute?
+
+<span>＋</span>
+
+</button>
+
+<div class="faq-a">
+
+3/B, Guru Nanak Nagar,
+Jammu, Jammu and Kashmir 180004.
+
+</div>
+
+</div>
+
+
+<div class="faq-item reveal">
+
+<button class="faq-q">
+
+What are the listed hours?
+
+<span>＋</span>
+
+</button>
+
+<div class="faq-a">
+
+Monday–Saturday,
+12:30 PM–7:30 PM.
+Sunday closed.
+
+Please confirm before visiting.
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<main
+id="gallery"
+class="page"
+>
+
+
+<section class="page-title">
+
+<div class="container reveal">
+
+<div class="eyebrow">
+GALLERY
+</div>
+
+<h1>
+
+Inside the
+
+<span class="grad">
+Mind Drill world.
+</span>
+
+</h1>
+
+<p>
+A dedicated space for classroom,
+faculty, student activities and
+institute photographs.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="container">
+
+
+<div class="gallery">
+
+
+<div class="photo reveal">
+
+<div>
+
+<span>🏫</span>
+
+<p>
+Institute
+</p>
+
+<small>
+Add your real photo here
+</small>
+
+</div>
+
+</div>
+
+
+<div class="photo reveal">
+
+<div>
+
+<span>📖</span>
+
+<p>
+Classroom
+</p>
+
+<small>
+Add your real photo here
+</small>
+
+</div>
+
+</div>
+
+
+<div class="photo reveal">
+
+<div>
+
+<span>🧑‍🏫</span>
+
+<p>
+Faculty
+</p>
+
+<small>
+Add your real photo here
+</small>
+
+</div>
+
+</div>
+
+
+<div class="photo reveal">
+
+<div>
+
+<span>📝</span>
+
+<p>
+Practice Session
+</p>
+
+<small>
+Add your real photo here
+</small>
+
+</div>
+
+</div>
+
+
+<div class="photo reveal">
+
+<div>
+
+<span>🎓</span>
+
+<p>
+Students
+</p>
+
+<small>
+Add your real photo here
+</small>
+
+</div>
+
+</div>
+
+
+<div class="photo reveal">
+
+<div>
+
+<span>✨</span>
+
+<p>
+Mind Drill Moments
+</p>
+
+<small>
+Add your real photo here
+</small>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div
+class="panel reveal"
+style="margin-top:25px"
+>
+
+<h2>
+Make the gallery yours.
+</h2>
+
+<p>
+Replace these placeholders with
+real photos of your institute,
+classrooms and activities.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<main
+id="contact"
+class="page"
+>
+
+
+<section class="page-title">
+
+<div class="container reveal">
+
+<div class="eyebrow">
+CONTACT
+</div>
+
+<h1>
+
+Let's start the
+
+<span class="grad">
+conversation.
+</span>
+
+</h1>
+
+<p>
+For classes, subjects, batches,
+timings or admissions, contact
+Mind Drill Classes directly.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="container contact">
+
+
+<div class="contact-card reveal">
+
+<div class="eyebrow">
+DIRECT CONTACT
+</div>
+
+<h2>
+Talk to Sir.
+</h2>
+
+
+<div class="contact-list">
+
+
+<div class="contact-row">
+
+<span>📱</span>
+
+<div>
+
+<b>
+7298548416
+</b>
+
+<small>
+Phone / WhatsApp
+</small>
+
+</div>
+
+</div>
+
+
+<div class="contact-row">
+
+<span>📍</span>
+
+<div>
+
+<b>
+3/B, Guru Nanak Nagar
+</b>
+
+<small>
+Jammu, Jammu and Kashmir 180004
+</small>
+
+</div>
+
+</div>
+
+
+<div class="contact-row">
+
+<span>🕒</span>
+
+<div>
+
+<b>
+Monday–Saturday
+</b>
+
+<small>
+12:30 PM–7:30 PM
+</small>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="actions">
+
+
+<a
+class="btn primary"
+target="_blank"
+href="https://wa.me/917298548416?text=Hello%20Sir%2C%20I%20would%20like%20to%20enquire%20about%20Mind%20Drill%20Classes."
+>
+💬 WhatsApp Sir
+</a>
+
+
+<a
+class="btn ghost"
+href="tel:+917298548416"
+>
+📞 Call
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<div class="contact-card map reveal">
+
+<div class="map-icon">
+📍
+</div>
+
+<h3>
+Find the Institute
+</h3>
+
+<p>
+3/B, Guru Nanak Nagar,
+Jammu, Jammu and Kashmir 180004
+</p>
+
+
+<a
+class="btn primary"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=3%2FB%2C%20Guru%20Nanak%20Nagar%2C%20Jammu%2C%20Jammu%20and%20Kashmir%20180004"
+>
+Open Google Maps ↗
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+© <span id="year"></span>
+Mind Drill Classes, Jammu
+
+<br><br>
+
+Learn • Practise • Master
+
+</div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
+
+<a
+class="whatsapp"
+target="_blank"
+aria-label="WhatsApp"
+href="https://wa.me/917298548416?text=Hello%20Sir%2C%20I%20would%20like%20to%20enquire%20about%20Mind%20Drill%20Classes."
+>
+💬
+</a>
+
+
+
+<script>
+
+/* =====================================================
+   PAGE NAVIGATION
+===================================================== */
+
+function showPage(pageId){
+
+    document
+    .querySelectorAll(".page")
+    .forEach(page=>{
+        page.classList.remove("active");
+    });
+
+
+    const page =
+    document.getElementById(pageId);
+
+
+    if(page){
+
+        page.classList.add("active");
+
+    }
+
+
+    document
+    .querySelectorAll(".nav-links a")
+    .forEach(link=>{
+
+        link.classList.remove("active");
+
+
+        if(
+            link.dataset.page === pageId
+        ){
+
+            link.classList.add("active");
+
+        }
 
     });
 
 
-    /* -----------------------------------------------------
-       CLOSE MOBILE MENU WHEN LINK CLICKED
-    ----------------------------------------------------- */
-
     document
-      .querySelectorAll(".nav-links a")
-      .forEach((link) => {
-
-        link.addEventListener("click", () => {
-
-          navLinks.classList.remove("active");
-
-          menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-
-          menuButton.textContent = "☰";
-
-        });
-
-      });
+    .getElementById("nav")
+    .classList
+    .remove("mobile");
 
 
-    /* -----------------------------------------------------
-       FAQ ACCORDION
-    ----------------------------------------------------- */
-
-    const faqButtons =
-      document.querySelectorAll(".faq-question");
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 
 
-    faqButtons.forEach((button) => {
+    setTimeout(
+        startReveal,
+        150
+    );
 
-      button.addEventListener("click", () => {
+}
 
-        const currentItem =
-          button.parentElement;
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+const header =
+document.getElementById("header");
+
+
+window.addEventListener(
+"scroll",
+()=>{
+
+    header.classList.toggle(
+        "scrolled",
+        window.scrollY > 20
+    );
+
+});
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const nav =
+document.getElementById("nav");
+
+
+menuBtn.addEventListener(
+"click",
+()=>{
+
+    nav.classList.toggle("mobile");
+
+});
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+document
+.querySelectorAll(".faq-q")
+.forEach(question=>{
+
+    question.addEventListener(
+    "click",
+    ()=>{
+
+        const item =
+        question.parentElement;
 
 
         document
-          .querySelectorAll(".faq-item")
-          .forEach((item) => {
+        .querySelectorAll(".faq-item")
+        .forEach(other=>{
 
-            if (item !== currentItem) {
+            if(other !== item){
 
-              item.classList.remove("active");
+                other.classList
+                .remove("open");
 
             }
 
-          });
+        });
 
 
-        currentItem.classList.toggle("active");
-
-      });
+        item.classList.toggle("open");
 
     });
 
+});
 
-    /* -----------------------------------------------------
-       SCROLL REVEAL
-    ----------------------------------------------------- */
 
-    const revealObserver =
-      new IntersectionObserver(
-        (entries) => {
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
 
-          entries.forEach((entry) => {
+let revealObserver;
 
-            if (entry.isIntersecting) {
 
-              entry.target.classList.add("visible");
+function startReveal(){
 
-              revealObserver.unobserve(
+    if(revealObserver){
+
+        revealObserver.disconnect();
+
+    }
+
+
+    revealObserver =
+    new IntersectionObserver(
+    entries=>{
+
+        entries.forEach(entry=>{
+
+            if(
+                entry.isIntersecting
+            ){
+
                 entry.target
-              );
+                .classList
+                .add("show");
 
             }
 
-          });
+        });
 
-        },
-        {
-          threshold: 0.12
-        }
-      );
+    },
+    {
+        threshold:.08
+    });
 
 
     document
-      .querySelectorAll(".reveal")
-      .forEach((element) => {
+    .querySelectorAll(
+        ".page.active .reveal"
+    )
+    .forEach(element=>{
 
         revealObserver.observe(element);
 
-      });
+    });
+
+}
 
 
-    /* -----------------------------------------------------
-       NAVBAR SHADOW ON SCROLL
-    ----------------------------------------------------- */
+/* =====================================================
+   CURRENT YEAR
+===================================================== */
 
-    const navbar =
-      document.querySelector("nav");
-
-
-    window.addEventListener(
-      "scroll",
-      () => {
-
-        if (window.scrollY > 20) {
-
-          navbar.style.boxShadow =
-            "0 10px 35px rgba(20,30,60,0.07)";
-
-        } else {
-
-          navbar.style.boxShadow = "none";
-
-        }
-
-      },
-      {
-        passive: true
-      }
-    );
+document
+.getElementById("year")
+.textContent =
+new Date().getFullYear();
 
 
-    /* -----------------------------------------------------
-       CLOSE MENU WITH ESC
-    ----------------------------------------------------- */
+/* =====================================================
+   OPEN PAGE FROM URL HASH
+===================================================== */
 
-    document.addEventListener(
-      "keydown",
-      (event) => {
+const hash =
+window.location.hash
+.replace("#","");
 
-        if (event.key === "Escape") {
 
-          navLinks.classList.remove("active");
+if(
+    hash &&
+    document.getElementById(hash)
+){
 
-          menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-          );
+    showPage(hash);
 
-          menuButton.textContent = "☰";
+}else{
 
-        }
+    showPage("home");
 
-      }
-    );
+}
 
-  </script>
+</script>
 
 </body>
 </html>
